@@ -25,3 +25,6 @@ script:
         lerna publish --yes --cd-version ${LERNA_CD_VERSION};
       fi;
     fi;
+    
+after_success:
+  - bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
